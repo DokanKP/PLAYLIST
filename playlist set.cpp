@@ -10,6 +10,7 @@ int main()
     for (int i = 0; i < n; i++){
         cin >> k[i];
     }
+    // unos
     set<int> plejlista;
     int r = 0;
     int l = 0;
@@ -18,6 +19,7 @@ int main()
             plejlista.erase(k[l]);
             l++;
         }
+        // brisati levi element dok se ne izbrise element koji se ponavlja
         plejlista.insert(k[d]);
         r = max(r, d-l+1);
     }
